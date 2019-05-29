@@ -699,7 +699,6 @@ static moduledata_t mod_data = {
 
 MODULE_VERSION(isboot, 1);
 MODULE_DEPEND(isboot, ether, 1, 1, 1);
-// iscsi.ko doesn't define MODULE_VERSION
-//MODULE_DEPEND(isboot, iscsi, 1, 1, 1);
+MODULE_DEPEND(isboot, icl, 1, 1, 1);
 MODULE_DEPEND(isboot, cam, 1, 1, 1);
 DECLARE_MODULE(isboot, mod_data, SI_SUB_PROTO_END, SI_ORDER_ANY);
