@@ -1066,7 +1066,8 @@ isboot_append_param(pdu_t *pp, char *format, ...)
 }
 
 
-#if __FreeBSD_version >= 1200000
+// changed in r324446
+#if __FreeBSD_version >= 1200051
 static void
 isboot_free_mbufext(struct mbuf *m)
 #else
@@ -1074,7 +1075,7 @@ static void
 isboot_free_mbufext(struct mbuf *m, void *p, void *optarg)
 #endif
 {
-#if __FreeBSD_version >= 1200000
+#if __FreeBSD_version >= 1200051
 	void *p = m->m_ext.ext_buf;
 #endif
 
